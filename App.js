@@ -18,13 +18,26 @@ export default function App() {
 
       <Image
         source={require('./assets/profile.jpeg')}
-        style={{width: '50%', height: '30%', borderRadius: 100}}
+        style={{width: '50%', height: '30%', borderRadius: 10}}
       />
 
       <View style={styles.detailsContainer}>
         <Text style={styles.name}>Manoah Luka</Text>
-        <Text>Mano.dev</Text>
-        <Text>Manoahluka@gmail.com</Text>
+        <View style={styles.detialItemContainer}>
+          <Text style={styles.keyText}>Display name:</Text>
+          <Text>Mano.dev1️⃣</Text>
+        </View>
+
+        <View style={styles.detialItemContainer}>
+          <Text style={styles.keyText}>Email:</Text>
+          <Text>Manoahluka@gmail.com</Text>
+        </View>
+
+        <View style={styles.detialItemContainer}>
+          <Text style={styles.keyText}>Pronouns:</Text>
+          <Text>he/his</Text>
+        </View>
+        
       </View>
 
       <TouchableOpacity style={styles.githubButton} onPress={openLink}> 
@@ -48,7 +61,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#111111',
+    backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
     gap: 30,
@@ -74,14 +87,25 @@ const styles = StyleSheet.create({
   name: {
     fontSize: 20,
     textAlign: 'center',
-    color: '#fff'
+    color: '#000'
   },
 
   detailsContainer:{
     padding: 10,
     borderWidth: 1,
     borderRadius: 10,
+    borderColor: '#8D8FA5',
+    rowGap: 10,
     width: '80%',
-    backgroundColor: '#2F2F2F'
+  },
+
+  detialItemContainer:{
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between'
+  },
+
+  keyText: {
+    color: '#8D8FA5'
   }
 });
